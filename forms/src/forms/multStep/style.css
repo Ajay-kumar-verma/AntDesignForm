@@ -1,0 +1,58 @@
+.steps-content {
+    min-height: 200px;
+    margin-top: 16px;
+    text-align: center;
+    background-color: #fafafa;
+    border: 1px dashed #e9e9e9;
+    border-radius: 2px;
+       
+}
+  
+  .steps-action {
+    margin-top: 10px;
+  }
+
+  [data-theme="dark"] .steps-content {
+    margin-top: 16px;
+    border: 1px dashed #303030;
+    background-color: rgba(255,255,255,0.04);
+    color: rgba(255,255,255,0.65);
+    padding-top: 80px;
+  }
+  
+  
+.form-container{
+    width:100%;
+    
+    }
+    
+    .contactBlock{
+      width:80%;
+      margin: auto;
+      padding: 5px;
+      background-color: #f1f1f1;
+    }
+    
+    .UserData-check{
+        float: left;
+    }
+
+    .UserData-kmsg{
+     float: right;
+    }
+    
+    .btn{
+        width: 100%;
+       color:white;
+    }
+   
+    @media only screen and (max-width: 600px) {
+       
+        .btn{
+            width: 10%;
+           color:rgb(215, 91, 91) ;
+        }
+       
+    
+    }
+    

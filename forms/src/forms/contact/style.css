@@ -1,0 +1,24 @@
+@import '~antd/dist/antd.css';
+
+.form-container{
+width:100%;
+
+}
+
+.contactBlock{
+  margin: auto;
+  width:60%;
+  padding: 5px;
+   background-color: #f1f1f1;
+}
+
+.contact-msg{
+ float: right;
+}
+
+.btn{
+    width: 100%;
+   color:white;
+}
+
+
