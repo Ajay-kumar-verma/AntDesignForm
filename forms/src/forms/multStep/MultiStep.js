@@ -6,7 +6,6 @@ import  AccountCreateInfo from './AccountCreateInfo'
 
 const { Step } = Steps;
 
-
 const steps = [
   {
     title: 'Number verification ',
