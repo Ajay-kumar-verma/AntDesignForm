@@ -14,13 +14,12 @@ const style = (e) =>{
   const {isActive} =e;
   console.log(isActive);
   if(isActive)
-  return {margin:"10px",color:"red",fontSize:"25px" }
- else return { margin:"10px",}
+  return {margin:"5px",color:"red" }
+ else return { margin:"2px",}
 }
 
 const Links =({children}) =>{
     console.log("App component loaded ")
-   
     return (<>
   <NavLink 
   style={style}
@@ -38,19 +37,20 @@ const lst = [
     pathComp("LogInForm",<Login />),
     pathComp("SignUp",<SignUp />),
     pathComp("ContackForm",<ContackForm />),
-    pathComp("StepForm",<MultiStep />),
-    pathComp("AddRemoveInput",<AddRemoveInput />),
+    // pathComp("StepForm",<MultiStep />),
+    // pathComp("AddRemoveInput",<AddRemoveInput />),
     pathComp("Address",<Address />),
     pathComp("Details",<Details />),
-    pathComp("Layout",<Layout />),
+    // pathComp("Layout",<Layout />),
 ]
  
 return (
   <>
-  <div  >
-    {lst.map(({path}) =><Links>{path}</Links>)}
-   </div>
+   <div className="menubar" >
+   {lst.map(({path}) =><Links>{path}</Links>)}
   
+   </div>
+
  <hr />
  <Routes>
  

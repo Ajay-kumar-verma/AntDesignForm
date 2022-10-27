@@ -6,14 +6,9 @@ import './style.css'
 const signUp = () => {
   return (
     <>
-    <div className="form-container" >
      <SignUp2 />
-      <hr />
-      <SignUp1 />
-   
-
-    </div>
-    
+      {/* <SignUp1 /> */}
+     
     </>
   )
 }

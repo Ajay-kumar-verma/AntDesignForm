@@ -1,3 +1,4 @@
+import './style.css'
 import {
     AutoComplete,
     Button,
@@ -9,29 +10,13 @@ import {
     InputNumber,
     Row,
     Select,
+    Divider
   } from 'antd';
   
   import React, { useState } from 'react';
+
   const { Option } = Select;
-  const formItemLayout = {
-    labelCol: {
-      xs: {
-        span: 24,
-      },
-      sm: {
-        span: 8,
-      },
-    },
-    wrapperCol: {
-      xs: {
-        span: 24,
-      },
-      sm: {
-        span: 16,
-      },
-    },
-  };
-  
+    
   const App = () => {
     const [form] = Form.useForm();
     const onFinish = (values) => {
@@ -43,18 +28,19 @@ import {
     } 
 
     return (
-      <Form  className="SignUp"
-        {...formItemLayout}
+      <Form  className="SignUpPage"
         form={form}
         name="register"
+        labelCol={{span: 24,}}
+        wrapperCol={{span: 24,}}
+       
         onFinish={onFinish}
         onFinishFailed={onFinishFailed}
         initialValues={{
-          residence: ['zhejiang', 'hangzhou', 'xihu'],
-          prefix: '86',
         }}
         scrollToFirstError
       >
+       <Divider>Create Account </Divider>
 
          <label>firstName</label>
         <Form.Item
@@ -164,7 +150,7 @@ import {
           </Checkbox>
         </Form.Item>
         <Form.Item >
-          <Button type="primary" htmlType="submit"className="btn" >
+          <Button type="primary" style={{width:"100%"}} htmlType="submit"className="btn" >
            createAccount
            </Button>
         </Form.Item>

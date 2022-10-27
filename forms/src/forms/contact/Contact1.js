@@ -1,9 +1,26 @@
 import React ,{useState} from 'react';
 
-import { Form, Input, Button, Checkbox, DatePicker } from 'antd';
+import { Form, Input, Button, Checkbox, Divider } from 'antd';
 const { TextArea } = Input;
 
 function AppContact() {
+
+  const dataInput =(...data)=>{
+    const {showCount,maxLength} = data[2]; 
+      return (<>
+        <Form.Item label={data[0]} name={data[1]} rules={[{required: true,message: 'required !'}]} >
+        {showCount?<Input showCount  maxLength={maxLength}  />:<Input  maxLength={maxLength} />} 
+         </Form.Item>
+  </>
+    )
+  }
+  
+
+
+
+
+
+
 
        const onFinish = (values) => {
     console.log('Received values of form: ', values);
@@ -14,20 +31,20 @@ function AppContact() {
   };
   
   return (
-    <div   className="block contactBlock">
-      <div className="container-fluid">
-        <div id="contact" className="titleHolder">
-          <p>We will contact you soon  </p>
-        </div>
-        <Form
- onFinish={onFinish}
+        <Form   className="contactPage"
+      onFinish={onFinish}
+      labelCol={{span: 24,}}
+      wrapperCol={{span: 24,}}
+     
       onFinishFailed={onFinishFailed}
-name="normal_login"
-          className="login-form"
-          initialValues={{ remember: true }}
-        >
+         initialValues={{ remember: true }}
+      
+      >
+     
+       <Divider>We will contact you soon ! </Divider>
           <Form.Item
             name="fullname" 
+            label="Enter full Name "
             rules={[
               { 
                 required: true,
@@ -55,8 +72,7 @@ name="normal_login"
           <Form.Item
             name="telephone"
             rules={[
-             
-              {
+ {
                 required: true,
                 message: 'Please input your mobile number',
               },
@@ -105,7 +121,7 @@ name="normal_login"
             >
               <Checkbox>I agree with terms and conditions.</Checkbox>
             </Form.Item>
-            <a href='#' className="contact-msg"> We will contact you soon ! </a>
+            <a href='#'style={{float:"right"}}  > Thanks for contacting us ! </a>
           </Form.Item>
 
           <Form.Item>
@@ -115,8 +131,7 @@ name="normal_login"
             </Button>
           </Form.Item>
         </Form>
-      </div>
-    </div>  
+  
   );
 }
 

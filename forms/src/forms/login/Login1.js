@@ -1,5 +1,5 @@
 import { Button, Checkbox, Form, Input,Row,Col } from 'antd';
-
+import './style.css';
 import React from 'react';
 const App = () => {
   const onFinish = (values) => {
@@ -13,13 +13,13 @@ const App = () => {
     <>
     
     
-  <Form  
+  <Form   className="LoginPage"
       name="basic"
       labelCol={{
-        span: 8,
+        span: 24,
       }}
       wrapperCol={{
-        span: 16,
+        span: 24,
       }}
       initialValues={{
         remember: true,

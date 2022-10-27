@@ -5,12 +5,7 @@ import './style.css'
 const signUp = () => {
   return (
     <>
-    <div className="form-container" >
-    
      <Contact1 />
-
-    </div>
-    
     </>
   )
 }
